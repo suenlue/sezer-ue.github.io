@@ -8,7 +8,7 @@ html {
 
 body {
   color: #1e2021;
-  padding: 24px;
+  padding: 3rem 1rem 1rem;
   margin: 0;
   max-width: 100%;
 }
@@ -163,7 +163,7 @@ ol li {
 
 .main a {
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 300;
   color: #1e2021;
   box-shadow: 0px 4px 0px 0px #d1e9ff;
   outline: 4px solid transparent;
@@ -261,10 +261,6 @@ ul.article-list li h2 a {
 }
 
 @media only screen and (min-width: 768px) {
-  body {
-    padding: 36px;
-  }
-
   a {
     padding: 2px;
   }
