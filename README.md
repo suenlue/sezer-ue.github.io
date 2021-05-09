@@ -1,1 +1,0 @@
-# sezer-ue.github.io
