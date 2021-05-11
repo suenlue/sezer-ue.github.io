@@ -3,7 +3,7 @@
 html {
   font-family: "Lato", sans-serif;
   font-size: calc(16px + 0.2vw);
-  background-color: #eaf5ff;
+  background-color: #fdfeff;
 }
 
 body {
@@ -14,13 +14,13 @@ body {
 }
 
 a:hover {
-  box-shadow: 0px 4px 0px 0px #d1e9ff;
-  outline: 4px solid transparent;
+  box-shadow: 0px 2px 0px 0px #d1e9ff;
+  outline: 2px solid transparent;
 }
 
 a:focus {
-  box-shadow: 0px 0px 0px 4px #d1e9ff;
-  outline: 4px solid transparent;
+  box-shadow: 0px 0px 0px 2px #d1e9ff;
+  outline: 2px solid transparent;
 }
 
 h1,
@@ -52,7 +52,7 @@ p {
 }
 
 .header-image {
-  border: 6px solid #d1e9ff;
+  border: 2px solid #d1e9ff;
   width: 88px;
   height: auto;
   border-radius: 50%;
@@ -74,8 +74,11 @@ p {
 }
 
 .header-description {
+  display: inline-block;
+  margin-top: 4px;
   font-size: 0.8rem;
   font-weight: 300;
+  line-height: 1rem;
 }
 
 .header-navigation {
@@ -165,13 +168,17 @@ ol li {
   text-decoration: none;
   font-weight: 300;
   color: #1e2021;
-  box-shadow: 0px 4px 0px 0px #d1e9ff;
-  outline: 4px solid transparent;
+  box-shadow: 0px 2px 0px 0px #d1e9ff;
+  outline: 2px solid transparent;
 }
 
 .main a:focus {
-  box-shadow: 0px 0px 0px 4px #d1e9ff;
-  outline: 4px solid transparent;
+  box-shadow: 0px 0px 0px 2px #d1e9ff;
+  outline: 2px solid transparent;
+}
+
+.main b {
+  font-weight: 400;
 }
 
 blockquote {
@@ -188,14 +195,18 @@ pre {
   white-space: normal;
 }
 
-pre code {
+code {
   color: #fefefe;
-  display: block;
   background-color: #1e2021;
+  padding: 0 4px;
+  font-weight: 300;
+}
+
+pre code {
+  display: block;
   white-space: pre;
   overflow-x: scroll;
   padding: 0 1.6rem;
-  font-weight: 300;
 }
 
 .pub-time {
@@ -261,10 +272,6 @@ ul.article-list li h2 a {
 }
 
 @media only screen and (min-width: 768px) {
-  a {
-    padding: 2px;
-  }
-
   .header-image {
     width: 124px;
   }
