@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>How to create a website with eleventy</title>
+    <title>How to create a website with eleventy</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,300;1,400;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
@@ -48,7 +48,91 @@ $ npm install @11ty/eleventy
 
 </code>
 </pre>
-<p>coming soon ..</p>
+<h2>3. Split your code</h2>
+<p>Suppose that this is the <code>index.html</code> file of the website to be built with eleventy:</p>
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;utf-8&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;title&gt;Title of my website&lt;/title&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/index.css&#34;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    Hello world!
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code>
+</pre>
+<p>Create a <code>_includes</code> folder in the root directory. Go into the folder and create a <code>main.liquid</code> file with the following content:</p>
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;utf-8&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;title&gt;{{ title }}&lt;/title&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/index.css&#34;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    {{ content }}
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code>
+</pre>
+<p>Create a <code>index.liquid</code> file in the root directory with the following content:</p>
+<pre>
+<code>
+---
+title: Title of my website
+layout: main
+---
+&lt;h1&gt;Hello world!&lt;/h1&gt;
+
+</code>
+</pre>
+<p>Create a <code>css</code> folder in the root directory. Go into the folder and create a <code>index.css</code> file with the following content:</p>
+<pre>
+<code>
+h1 {
+    color: red;
+}
+
+</code>
+</pre>
+<h2>4. Include CSS</h2>
+<p>Create a <code>.eleventy.js</code> file in the root directory with the following content:</p>
+<pre>
+<code>
+module.exports = function(eleventyConfig) {
+    eleventyConfig.addPassthroughCopy(&#34;css&#34;);
+}
+
+</code>
+</pre>
+<h2>5. Build static files and run local server</h2>
+<p>Run the following command in the root directory:</p>
+<pre>
+<code>
+npx eleventy --serve
+
+</code>
+</pre>
+<p>You should see the following output:</p>
+<pre>
+<code>
+ --------------------------------------
+ Local: http://localhost:8080
+ ...
+
+</code>
+</pre>
+<p>Open <code>http://localhost:8080</code> and you should see your website.</p>
     </main>
     <footer class="footer">
         <p class="footer-notes">© 2021 Sezer Ünlü</p>
