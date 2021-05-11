@@ -59,7 +59,7 @@ p {
 }
 
 .header-image-link {
-  font-size: 0;
+  height: 0;
   display: inline-block;
 }
 
@@ -200,6 +200,8 @@ code {
   background-color: #1e2021;
   padding: 0 4px;
   font-weight: 300;
+  line-height: 1.6;
+  font-size: 0.9rem;
 }
 
 pre code {
@@ -210,14 +212,19 @@ pre code {
 }
 
 .pub-time {
+  display: block;
   font-size: 0.8rem;
   font-weight: 300;
-  margin-bottom: 1.4rem;
+  margin-bottom: 2rem;
 }
 
 .main img {
   max-width: 100%;
   height: auto;
+}
+
+.h-article {
+  margin-bottom: 0.8rem;
 }
 
 /* Article list */
@@ -251,7 +258,7 @@ ul.article-list li h2 a {
 
 .footer {
   max-width: 1024px;
-  margin: 3rem auto 0;
+  margin: 5rem auto 1rem;
 }
 
 .footer-notes {
