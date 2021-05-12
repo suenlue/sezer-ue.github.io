@@ -200,7 +200,6 @@ pre code {
   display: block;
   font-size: 0.8rem;
   font-weight: 300;
-  margin-bottom: 2rem;
 }
 
 .main img {
@@ -237,6 +236,17 @@ ul.article-list li h2 a {
   font-weight: 900;
   font-size: 1.6rem;
   margin-top: 2.4rem;
+}
+
+.article-list-info-wrapper {
+  margin-bottom: 2rem;
+}
+
+.article-tags-wrapper {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-top: 0.2rem;
 }
 
 /* Footer */
