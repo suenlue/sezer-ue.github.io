@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to add a navigation bar to your eleventy website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,300;1,400;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-item">
+            <h1 class="header-title"><a href="/" class="header-title-link">Sezer Ünlü</a></h1>
+            <small class="header-description">B.Sc. Computer scientist & front-end web engineer</small>
+        </div>
+        <div class="header-item">
+            <nav class="header-navigation" aria-label="Navigation">
+                
+                    <a href="/blog">Blog</a>
+                
+                    <a href="https://twitter.com/sezer">Twitter</a>
+                
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <h1 class="article-title">How to add a navigation bar to your eleventy website</h1>
+<div class="article-list-info-wrapper">
+    <span class="pub-time">Published on <time datetime="2021-05-13" pubdate>13 May, 2021</time></span>
+    
+        <div class="article-tags-wrapper">
+            
+                
+                    <a href="/tags/how-to">#how-to</a>,
+                
+            
+                
+                    <a href="/tags/eleventy">#eleventy</a>
+                
+            
+        </div>
+    
+</div>
+<p class="larger">A navigation bar contains the most important links to intern pages or sections of your website. It can also contain links to external websites.</p>
+<h2>1. Create navigation data</h2>
+<p>Create a <code>_data</code> folder in the root directory. Go into it and create a <code>navigation.js</code> file with the following content:</p>
+<pre>
+<code>
+module.exports = [
+  {
+    &#34;label&#34;: &#34;First menu link&#34;,
+    &#34;url&#34;: &#34;/first-menu-link&#34;
+  },
+  {
+    &#34;label&#34;: &#34;Second menu link&#34;,
+    &#34;url&#34;: &#34;/second-menu-link&#34;
+  },
+  {
+    &#34;label&#34;: &#34;Third menu link&#34;,
+    &#34;url&#34;: &#34;/third-menu-link&#34;
+  }
+]
+
+</code>
+</pre>
+<h2>2. Use navigation data in your template</h2>
+<p>Insert the following code snippet in your template where it should be rendered:</p>
+<pre>
+<code>
+&lt;nav&gt;
+    {&#37; for item in navigation &#37;}
+        &lt;a href="{&#123; item.url &#125;}"&gt;{&#123; item.label &#125;}&lt;/a&gt;
+    {&#37; endfor &#37;}
+&lt;/nav&gt;
+
+</code>
+</pre>
+    </main>
+    <footer class="footer">
+        <p class="footer-notes">© 2021 Sezer Ünlü</p>
+    </footer>
+</body>
+</html>
