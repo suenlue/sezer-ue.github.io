@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>How to add a favicon to your website</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,300;1,400;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
@@ -25,28 +25,19 @@
         </div>
     </header>
     <main class="main">
-        <p class="larger">I write about problems, solutions and my own experiences in front-end development.</p>
-<ul class="article-list">
-    
-    <li>
-        <h2 class="article-list-title article-title"><a href="/blog/how-to-add-a-favicon-to-your-website/">How to add a favicon to your website</a></h2>
-        <span class="pub-time">Published on <time datetime="2021-05-12" pubdate>12 May, 2021</time></span>
-        
-    </li>
-    
-    <li>
-        <h2 class="article-list-title article-title"><a href="/blog/how-to-create-a-website-with-eleventy/">How to create a website with eleventy</a></h2>
-        <span class="pub-time">Published on <time datetime="2021-05-11" pubdate>11 May, 2021</time></span>
-        
-    </li>
-    
-    <li>
-        <h2 class="article-list-title article-title"><a href="/blog/hello-world/">Hello world!</a></h2>
-        <span class="pub-time">Published on <time datetime="2021-05-10" pubdate>10 May, 2021</time></span>
-        
-    </li>
-    
-</ul>
+        <h1 class="article-title">How to add a favicon to your website</h1>
+<span class="pub-time">Published on <time datetime="2021-05-12" pubdate>May 12, 2021</time></span>
+<p class="larger">A favicon is an image which is visible in the tab of a browser. It is located on the left side of the website's title.</p>
+<p>You need three different image sizes of your favicon:<br /><b>180x180px</b>, <b>32x32px</b>, <b>16x16px</b></p>
+<p>Add this following code snippet before your closing <code>&lt;/head&gt;</code> tag and the enter correct name of your favicon into the <code>href</code> attribute:</p>
+<pre>
+<code>
+&lt;link rel=&#34;apple-touch-icon&#34; type=&#34;image/png&#34; sizes=&#34;180x180&#34; href=&#34;FAVICON_NAME_180x180.png&#34;&gt;
+&lt;link rel=&#34;icon&#34; type=&#34;image/png&#34; sizes=&#34;32x32&#34; href=&#34;FAVICON_NAME_32x32.png&#34;&gt;
+&lt;link rel=&#34;icon&#34; type=&#34;image/png&#34; sizes=&#34;16x16&#34; href=&#34;FAVICON_NAME_16x16.png&#34;&gt;
+
+</code>
+</pre>
     </main>
     <footer class="footer">
         <p class="footer-notes">© 2021 Sezer Ünlü</p>
